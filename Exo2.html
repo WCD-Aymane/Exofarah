@@ -1,300 +1,103 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exo2.md</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- MathJax for LaTeX formulas -->
-    <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-    </script>
-    <!-- Marked for Markdown parsing -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-    <style>
-        :root {
-            --bg-body: #f3f4f6;
-            --bg-card: #ffffff;
-            --text-main: #374151;
-            --text-heading: #111827;
-            --accent: #2563eb;
-            --border-color: #e5e7eb;
-            --code-bg: #f8fafc;
-        }
-        
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.8;
-            margin: 0;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            padding: 60px 80px;
-            border-radius: 8px; /* Slight radius for modern feel, not too rounded */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px;
-            }
-        }
-
-        /* Typography & Structure */
-        h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
-            color: var(--text-heading);
-            margin-top: 2em;
-            margin-bottom: 0.8em;
-            line-height: 1.3;
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            color: var(--accent);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 15px;
-            margin-top: 0.5em; /* Less margin for title at top */
-        }
-        
-        h2 {
-            font-size: 1.6rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-        }
-        
-        h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        p {
-            margin-bottom: 1.5em;
-            text-align: justify;
-        }
-
-        /* Lists */
-        ul, ol {
-            margin-bottom: 1.5em;
-            padding-left: 2em;
-        }
-        
-        li {
-            margin-bottom: 0.5em;
-        }
-
-        /* Math Styling */
-        mjx-container {
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 10px 0;
-        }
-
-        /* Formatting Elements */
-        blockquote {
-            border-left: 5px solid var(--accent);
-            background: #eff6ff;
-            margin: 2em 0;
-            padding: 1em 1.5em;
-            border-radius: 0 4px 4px 0;
-            font-style: italic;
-            color: #1e40af;
-        }
-        
-        strong {
-            color: #000;
-            font-weight: 700;
-        }
-        
-        code {
-            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
-            background: var(--code-bg);
-            color: #ef4444; /* Reddish for code inline */
-            padding: 0.2em 0.4em;
-            border-radius: 4px;
-            font-size: 0.9em;
-            border: 1px solid #e2e8f0;
-        }
-        
-        pre {
-            background: #1e293b;
-            color: #f8fafc;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 2em 0;
-        }
-        
-        pre code {
-            background: transparent;
-            color: inherit;
-            border: none;
-            padding: 0;
-        }
-
-        /* Navigation */
-        .nav-bar {
-            margin-bottom: 30px;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            padding: 8px 16px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 20px;
-        }
-        
-        .back-link:hover {
-            background: rgba(37, 99, 235, 0.2);
-            transform: translateX(-3px);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html" class="back-link">← Retour au sommaire</a>
-        </nav>
-        
-        <div id="content"></div>
-    </div>
-
-    <script>
-        const markdownContent = `# Exercice 2 : Géométrie dans l'espace
-
-Données : Repère $(O; \vec{i}, \vec{j}, \vec{k})$.
-Points : $A(-3; 2; 2)$, $B(0; 3; 3)$, $C(-2; 3; 1)$ et $D(4; 3; 10)$.
-
-## 1. Positions relatives
-
-**(a) Alignement des points A, B, C**
-Calculons les vecteurs :
-- $\vec{AB} (0 - (-3); 3-2; 3-2) \implies \vec{AB}(3; 1; 1)$
-- $\vec{AC} (-2 - (-3); 3-2; 1-2) \implies \vec{AC}(1; 1; -1)$
-
-Il n'existe pas de réel $k$ unique tel que $\vec{AB} = k\vec{AC}$.
-(Pour les abscisses $3 = k \times 1 \implies k=3$, mais pour les ordonnées $1 = k \times 1 \implies k=1$).
-Les vecteurs ne sont pas colinéaires, donc les points **A, B et C ne sont pas alignés**.
-
-**(b) Coplanarité des vecteurs**
-Calculons $\vec{AD}(4 - (-3); 3-2; 10-2) \implies \vec{AD}(7; 1; 8)$.
-On cherche deux réels $x$ et $y$ tels que $\vec{AD} = x\vec{AB} + y\vec{AC}$.
-Cela donne le système :
-$$
-\begin{cases} 
-3x + y = 7 \\ 
-x + y = 1 \\ 
-x - y = 8 
-\end{cases}
-$$
-En additionnant les deux dernières lignes : $2x = 9 \implies x = 4,5$.
-En remplaçant dans la deuxième ligne : $4,5 + y = 1 \implies y = -3,5$.
-Vérifions dans la première ligne : $3(4,5) + (-3,5) = 13,5 - 3,5 = 10$.
-Or, on attendait 7. Le système est incompatible.
-Les vecteurs $\vec{AB}$, $\vec{AC}$ et $\vec{AD}$ ne sont **pas coplanaires**.
-
-**(c) Position relative de (AD) et (ABC)**
-Comme les vecteurs ne sont pas coplanaires, le point D n'appartient pas au plan (ABC). La droite (AD) n'est ni incluse ni parallèle au plan (ABC).
-La droite (AD) et le plan (ABC) sont donc **sécants** (en un point unique, qui est le point A).
-
-## 2. Représentation paramétrique
-
-**(a) Droite (AD)**
-La droite passe par $A(-3; 2; 2)$ et a pour vecteur directeur $\vec{AD}(7; 1; 8)$.
-$$
-\begin{cases} 
-x = -3 + 7t \\ 
-y = 2 + t \\ 
-z = 2 + 8t 
-\end{cases} 
-\quad, t \in \mathbb{R}
-$$
-
-**(b) Appartenance du point M**
-Soit $M(-\frac{19}{4}; \frac{7}{4}; 0)$. Appartient-il à (AD) ?
-On résout l'équation sur $z$ : $2 + 8t = 0 \implies 8t = -2 \implies t = -0,25$.
-On vérifie les autres coordonnées avec $t = -0,25$ :
-- $x = -3 + 7(-0,25) = -3 - 1,75 = -4,75$. Or $-\frac{19}{4} = -4,75$. (Vrai)
-- $y = 2 + (-0,25) = 1,75$. Or $\frac{7}{4} = 1,75$. (Vrai)
-Le point M **appartient** à la droite (AD).
-
-## 3. Intersection de droites
-
-Soit la droite $(d)$ définie par :
-$$
-\begin{cases} 
-x = -2 - 2k \\ 
-y = -3 + k \\ 
-z = -6 
-\end{cases}
-\quad, k \in \mathbb{R}
-$$
-
-**(a) Un point appartenant à (d)**
-En prenant $k=0$, on obtient le point $P(-2; -3; -6)$.
-
-**(b) Un vecteur directeur de (d)**
-On lit les coefficients devant le paramètre $k$ : $\vec{u}(-2; 1; 0)$.
-
-**(c) Intersection des droites (AD) et (d)**
-On cherche s'il existe un couple $(t, k)$ vérifiant le système :
-$$
-\begin{cases} 
--3 + 7t = -2 - 2k \quad (1) \\ 
-2 + t = -3 + k \quad \quad (2) \\ 
-2 + 8t = -6 \quad \quad \quad (3)
-\end{cases}
-$$
-D'après (3) : $8t = -8 \implies t = -1$.
-On remplace $t$ dans (2) : $2 + (-1) = -3 + k \implies 1 = -3 + k \implies k = 4$.
-On vérifie la compatibilité dans (1) :
-- Membre de gauche : $-3 + 7(-1) = -10$.
-- Membre de droite : $-2 - 2(4) = -2 - 8 = -10$.
-L'égalité est vérifiée. Les droites sont sécantes.
-
-Pour trouver les coordonnées du point d'intersection $I$, on remplace $t=-1$ dans la paramétrique de (AD) :
-- $x = -3 - 7 = -10$
-- $y = 2 - 1 = 1$
-- $z = 2 - 8 = -6$
-Les droites sont sécantes au point **$M(-10; 1; -6)$** (Note: l'énoncé l'appelle M, mais pour éviter la confusion avec la question 2b, notons-le point d'intersection).`;
-        
-        // Configure marked options
-        marked.setOptions({
-            gfm: true,
-            breaks: true
-        });
-        
-        // Render content
-        const rendered = marked.parse(markdownContent);
-        document.getElementById('content').innerHTML = rendered;
-    </script>
-</body>
-</html>
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="Exercice_2__Gomtrie_dans_lespace_0"></a>Exercice 2 :
+    Géométrie dans l’espace</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="4">Données : Repère $(O; \vec{i}, \vec{j}, \vec{k})$.<br>
+    Points : $A(-3; 2; 2)$, $B(0; 3; 3)$, $C(-2; 3; 1)$ et $D(4; 3; 10)$.</p>
+<h2 class="code-line" data-line-start=5 data-line-end=6><a id="1_Positions_relatives_5"></a>1. Positions relatives</h2>
+<p class="has-line-data" data-line-start="7" data-line-end="9"><strong>(a) Alignement des points A, B, C</strong><br>
+    Calculons les vecteurs :</p>
+<ul>
+    <li class="has-line-data" data-line-start="9" data-line-end="10">$\vec{AB} (0 - (-3); 3-2; 3-2) \implies \vec{AB}(3;
+        1; 1)$</li>
+    <li class="has-line-data" data-line-start="10" data-line-end="12">$\vec{AC} (-2 - (-3); 3-2; 1-2) \implies
+        \vec{AC}(1; 1; -1)$</li>
+</ul>
+<p class="has-line-data" data-line-start="12" data-line-end="15">Il n’existe pas de réel $k$ unique tel que $\vec{AB} =
+    k\vec{AC}$.<br>
+    (Pour les abscisses $3 = k \times 1 \implies k=3$, mais pour les ordonnées $1 = k \times 1 \implies k=1$).<br>
+    Les vecteurs ne sont pas colinéaires, donc les points <strong>A, B et C ne sont pas alignés</strong>.</p>
+<p class="has-line-data" data-line-start="16" data-line-end="32"><strong>(b) Coplanarité des vecteurs</strong><br>
+    Calculons $\vec{AD}(4 - (-3); 3-2; 10-2) \implies \vec{AD}(7; 1; 8)$.<br>
+    On cherche deux réels $x$ et $y$ tels que $\vec{AD} = x\vec{AB} + y\vec{AC}$.<br>
+    Cela donne le système :<br>
+    $$<br>
+    \begin{cases}<br>
+    3x + y = 7 \<br>
+    x + y = 1 \<br>
+    x - y = 8<br>
+    \end{cases}<br>
+    $$<br>
+    En additionnant les deux dernières lignes : $2x = 9 \implies x = 4,5$.<br>
+    En remplaçant dans la deuxième ligne : $4,5 + y = 1 \implies y = -3,5$.<br>
+    Vérifions dans la première ligne : $3(4,5) + (-3,5) = 13,5 - 3,5 = 10$.<br>
+    Or, on attendait 7. Le système est incompatible.<br>
+    Les vecteurs $\vec{AB}$, $\vec{AC}$ et $\vec{AD}$ ne sont <strong>pas coplanaires</strong>.</p>
+<p class="has-line-data" data-line-start="33" data-line-end="36"><strong>© Position relative de (AD) et
+        (ABC)</strong><br>
+    Comme les vecteurs ne sont pas coplanaires, le point D n’appartient pas au plan (ABC). La droite (AD) n’est ni
+    incluse ni parallèle au plan (ABC).<br>
+    La droite (AD) et le plan (ABC) sont donc <strong>sécants</strong> (en un point unique, qui est le point A).</p>
+<h2 class="code-line" data-line-start=37 data-line-end=38><a id="2_Reprsentation_paramtrique_37"></a>2. Représentation
+    paramétrique</h2>
+<p class="has-line-data" data-line-start="39" data-line-end="49"><strong>(a) Droite (AD)</strong><br>
+    La droite passe par $A(-3; 2; 2)$ et a pour vecteur directeur $\vec{AD}(7; 1; 8)$.<br>
+    $$<br>
+    \begin{cases}<br>
+    x = -3 + 7t \<br>
+    y = 2 + t \<br>
+    z = 2 + 8t<br>
+    \end{cases}<br>
+    \quad, t \in \mathbb{R}<br>
+    $$</p>
+<p class="has-line-data" data-line-start="50" data-line-end="54"><strong>(b) Appartenance du point M</strong><br>
+    Soit $M(-\frac{19}{4}; \frac{7}{4}; 0)$. Appartient-il à (AD) ?<br>
+    On résout l’équation sur $z$ : $2 + 8t = 0 \implies 8t = -2 \implies t = -0,25$.<br>
+    On vérifie les autres coordonnées avec $t = -0,25$ :</p>
+<ul>
+    <li class="has-line-data" data-line-start="54" data-line-end="55">$x = -3 + 7(-0,25) = -3 - 1,75 = -4,75$. Or
+        $-\frac{19}{4} = -4,75$. (Vrai)</li>
+    <li class="has-line-data" data-line-start="55" data-line-end="58">$y = 2 + (-0,25) = 1,75$. Or $\frac{7}{4} = 1,75$.
+        (Vrai)<br>
+        Le point M <strong>appartient</strong> à la droite (AD).</li>
+</ul>
+<h2 class="code-line" data-line-start=58 data-line-end=59><a id="3_Intersection_de_droites_58"></a>3. Intersection de
+    droites</h2>
+<p class="has-line-data" data-line-start="60" data-line-end="69">Soit la droite $(d)$ définie par :<br>
+    $$<br>
+    \begin{cases}<br>
+    x = -2 - 2k \<br>
+    y = -3 + k \<br>
+    z = -6<br>
+    \end{cases}<br>
+    \quad, k \in \mathbb{R}<br>
+    $$</p>
+<p class="has-line-data" data-line-start="70" data-line-end="72"><strong>(a) Un point appartenant à (d)</strong><br>
+    En prenant $k=0$, on obtient le point $P(-2; -3; -6)$.</p>
+<p class="has-line-data" data-line-start="73" data-line-end="75"><strong>(b) Un vecteur directeur de (d)</strong><br>
+    On lit les coefficients devant le paramètre $k$ : $\vec{u}(-2; 1; 0)$.</p>
+<p class="has-line-data" data-line-start="76" data-line-end="88"><strong>© Intersection des droites (AD) et
+        (d)</strong><br>
+    On cherche s’il existe un couple $(t, k)$ vérifiant le système :<br>
+    $$<br>
+    \begin{cases}<br>
+    -3 + 7t = -2 - 2k \quad (1) \<br>
+    2 + t = -3 + k \quad \quad (2) \<br>
+    2 + 8t = -6 \quad \quad \quad (3)<br>
+    \end{cases}<br>
+    $$<br>
+    D’après (3) : $8t = -8 \implies t = -1$.<br>
+    On remplace $t$ dans (2) : $2 + (-1) = -3 + k \implies 1 = -3 + k \implies k = 4$.<br>
+    On vérifie la compatibilité dans (1) :</p>
+<ul>
+    <li class="has-line-data" data-line-start="88" data-line-end="89">Membre de gauche : $-3 + 7(-1) = -10$.</li>
+    <li class="has-line-data" data-line-start="89" data-line-end="92">Membre de droite : $-2 - 2(4) = -2 - 8 = -10$.<br>
+        L’égalité est vérifiée. Les droites sont sécantes.</li>
+</ul>
+<p class="has-line-data" data-line-start="92" data-line-end="93">Pour trouver les coordonnées du point d’intersection
+    $I$, on remplace $t=-1$ dans la paramétrique de (AD) :</p>
+<ul>
+    <li class="has-line-data" data-line-start="93" data-line-end="94">$x = -3 - 7 = -10$</li>
+    <li class="has-line-data" data-line-start="94" data-line-end="95">$y = 2 - 1 = 1$</li>
+    <li class="has-line-data" data-line-start="95" data-line-end="97">$z = 2 - 8 = -6$<br>
+        Les droites sont sécantes au point <strong>$M(-10; 1; -6)$</strong> (Note: l’énoncé l’appelle M, mais pour
+        éviter la confusion avec la question 2b, notons-le point d’intersection).</li>
+</ul>

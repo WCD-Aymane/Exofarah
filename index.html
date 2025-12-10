@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,6 +146,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -157,40 +159,40 @@
         </div>
 
         <div class="file-list" id="fileList">
-            
-            <a href="Eco1.html" class="file-card" data-name="eco1.md">
+
+            <a href="exo1.html" class="file-card" data-name="exo1.md">
                 <div class="file-info">
                     <div class="icon">MD</div>
                     <div class="file-details">
-                        <span class="filename">Eco1.md</span>
+                        <span class="filename">Exercice 1</span>
                         <span class="meta">3.0 KB • Modifié le 2025-12-10 23:15</span>
                     </div>
                 </div>
                 <div class="arrow">→</div>
             </a>
-            
-            <a href="Exo3.html" class="file-card" data-name="exo3.md">
+
+            <a href="exo2.html" class="file-card" data-name="exo2.md">
                 <div class="file-info">
                     <div class="icon">MD</div>
                     <div class="file-details">
-                        <span class="filename">Exo3.md</span>
+                        <span class="filename">Exercice 2</span>
                         <span class="meta">2.0 KB • Modifié le 2025-12-10 23:15</span>
                     </div>
                 </div>
                 <div class="arrow">→</div>
             </a>
-            
-            <a href="Exo2.html" class="file-card" data-name="exo2.md">
+
+            <a href="exo3.html" class="file-card" data-name="exo3.md">
                 <div class="file-info">
                     <div class="icon">MD</div>
                     <div class="file-details">
-                        <span class="filename">Exo2.md</span>
+                        <span class="filename">Exercice 3</span>
                         <span class="meta">3.4 KB • Modifié le 2025-12-10 23:15</span>
                     </div>
                 </div>
                 <div class="arrow">→</div>
             </a>
-            
+
         </div>
     </div>
 
@@ -201,7 +203,7 @@
 
         searchInput.addEventListener('input', (e) => {
             const filter = e.target.value.toLowerCase();
-            
+
             for (let i = 0; i < cards.length; i++) {
                 const card = cards[i];
                 const name = card.getAttribute('data-name');
@@ -214,4 +216,5 @@
         });
     </script>
 </body>
+
 </html>

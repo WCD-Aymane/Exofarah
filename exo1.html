@@ -1,0 +1,522 @@
+<h1 class="code-line" data-line-start=0 data-line-end=1><a id="Exercice_1__Analyse_de_suite_et_fonction_0"></a>Exercice
+    1 : Analyse de suite et fonction</h1>
+<h2 class="code-line" data-line-start=2 data-line-end=3><a id="1_tude_de_la_fonction_f_2"></a>1. Étude de la fonction
+    $f$</h2>
+<p class="has-line-data" data-line-start="4" data-line-end="7"><strong>(a) Calcul de la dérivée</strong><br>
+    On considère la fonction définie sur $[0; 1]$ par $f(x) = 0,2 x e<sup>{x</sup>2}$.<br>
+    C’est une forme $u \times v$ avec :</p>
+<ul>
+    <li class="has-line-data" data-line-start="7" data-line-end="8">$u(x) = 0,2x \implies u’(x) = 0,2$</li>
+    <li class="has-line-data" data-line-start="8" data-line-end="10">$v(x) = e<sup>{x</sup>2} \implies v’(x) = 2x
+        e<sup>{x</sup>2}$ (dérivée composée $(e^u)’ = u’e^u$)</li>
+</ul>
+<p class="has-line-data" data-line-start="10" data-line-end="13"><span class="math inline"><span class="katex"><span
+                class="katex-mathml"><math>
+                    <semantics>
+                        <mrow>
+                            <msup>
+                                <mi>f</mi>
+                                <mo mathvariant="normal">′</mo>
+                            </msup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <msup>
+                                <mi>u</mi>
+                                <mo mathvariant="normal">′</mo>
+                            </msup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mi>v</mi>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>+</mo>
+                            <mi>u</mi>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <msup>
+                                <mi>v</mi>
+                                <mo mathvariant="normal">′</mo>
+                            </msup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">f&#x27;(x) = u&#x27;(x)v(x) + u(x)v&#x27;(x)
+                        </annotation>
+                    </semantics>
+                </math></span><span class="katex-html" aria-hidden="true"><span class="strut"
+                    style="height:0.751892em;"></span><span class="strut bottom"
+                    style="height:1.001892em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span
+                            class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span
+                                class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span
+                                                class="pstrut" style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                        class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span
+                        class="mord rule" style="margin-right:0.2777777777777778em;"></span><span
+                        class="mrel">=</span><span class="mord rule"
+                        style="margin-right:0.2777777777777778em;"></span><span class="mord"><span
+                            class="mord mathit">u</span><span class="msupsub"><span class="vlist-t"><span
+                                    class="vlist-r"><span class="vlist" style="height:0.751892em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                        class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span
+                        class="mord mathit" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span
+                        class="mord mathit">x</span><span class="mclose">)</span><span class="mord rule"
+                        style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span
+                        class="mord rule" style="margin-right:0.2222222222222222em;"></span><span
+                        class="mord mathit">u</span><span class="mopen">(</span><span class="mord mathit">x</span><span
+                        class="mclose">)</span><span class="mord"><span class="mord mathit"
+                            style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span
+                                    class="vlist-r"><span class="vlist" style="height:0.751892em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                        class="mopen">(</span><span class="mord mathit">x</span><span
+                        class="mclose">)</span></span></span></span></span><br>
+    <span class="math inline"><span class="katex"><span class="katex-mathml"><math>
+                    <semantics>
+                        <mrow>
+                            <msup>
+                                <mi>f</mi>
+                                <mo mathvariant="normal">′</mo>
+                            </msup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                            <mo separator="true">,</mo>
+                            <mn>2</mn>
+                            <msup>
+                                <mi>e</mi>
+                                <msup>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </msup>
+                            <mo>+</mo>
+                            <mn>0</mn>
+                            <mo separator="true">,</mo>
+                            <mn>2</mn>
+                            <mi>x</mi>
+                            <mo>(</mo>
+                            <mn>2</mn>
+                            <mi>x</mi>
+                            <msup>
+                                <mi>e</mi>
+                                <msup>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </msup>
+                            <mo>)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">f&#x27;(x) = 0,2 e^{x^2} + 0,2x (2x e^{x^2})
+                        </annotation>
+                    </semantics>
+                </math></span><span class="katex-html" aria-hidden="true"><span class="strut"
+                    style="height:0.9869199999999999em;"></span><span class="strut bottom"
+                    style="height:1.23692em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span
+                            class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span
+                                class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span
+                                                class="pstrut" style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                        class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span
+                        class="mord rule" style="margin-right:0.2777777777777778em;"></span><span
+                        class="mrel">=</span><span class="mord rule"
+                        style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span><span
+                        class="mpunct">,</span><span class="mord rule"
+                        style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span
+                        class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span
+                                    class="vlist-r"><span class="vlist" style="height:0.9869199999999999em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight"><span
+                                                            class="mord mathit mtight">x</span><span
+                                                            class="msupsub"><span class="vlist-t"><span
+                                                                    class="vlist-r"><span class="vlist"
+                                                                        style="height:0.8913142857142857em;"><span
+                                                                            style="top:-2.931em;margin-right:0.07142857142857144em;"><span
+                                                                                class="pstrut"
+                                                                                style="height:2.5em;"></span><span
+                                                                                class="sizing reset-size3 size1 mtight"><span
+                                                                                    class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span
+                        class="mord rule" style="margin-right:0.2222222222222222em;"></span><span
+                        class="mbin">+</span><span class="mord rule"
+                        style="margin-right:0.2222222222222222em;"></span><span class="mord">0</span><span
+                        class="mpunct">,</span><span class="mord rule"
+                        style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span
+                        class="mord mathit">x</span><span class="mopen">(</span><span class="mord">2</span><span
+                        class="mord mathit">x</span><span class="mord"><span class="mord mathit">e</span><span
+                            class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.9869199999999999em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight"><span
+                                                            class="mord mathit mtight">x</span><span
+                                                            class="msupsub"><span class="vlist-t"><span
+                                                                    class="vlist-r"><span class="vlist"
+                                                                        style="height:0.8913142857142857em;"><span
+                                                                            style="top:-2.931em;margin-right:0.07142857142857144em;"><span
+                                                                                class="pstrut"
+                                                                                style="height:2.5em;"></span><span
+                                                                                class="sizing reset-size3 size1 mtight"><span
+                                                                                    class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span
+                        class="mclose">)</span></span></span></span></span><br>
+    <span class="math inline"><span class="katex"><span class="katex-mathml"><math>
+                    <semantics>
+                        <mrow>
+                            <msup>
+                                <mi>f</mi>
+                                <mo mathvariant="normal">′</mo>
+                            </msup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                            <mo separator="true">,</mo>
+                            <mn>2</mn>
+                            <msup>
+                                <mi>e</mi>
+                                <msup>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </msup>
+                            <mo>(</mo>
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <mn>2</mn>
+                            <msup>
+                                <mi>x</mi>
+                                <mn>2</mn>
+                            </msup>
+                            <mo>)</mo>
+                        </mrow>
+                        <annotation encoding="application/x-tex">f&#x27;(x) = 0,2 e^{x^2} (1 + 2x^2)</annotation>
+                    </semantics>
+                </math></span><span class="katex-html" aria-hidden="true"><span class="strut"
+                    style="height:0.9869199999999999em;"></span><span class="strut bottom"
+                    style="height:1.23692em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span
+                            class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span
+                                class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span
+                                                class="pstrut" style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                        class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span
+                        class="mord rule" style="margin-right:0.2777777777777778em;"></span><span
+                        class="mrel">=</span><span class="mord rule"
+                        style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span><span
+                        class="mpunct">,</span><span class="mord rule"
+                        style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span
+                        class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span
+                                    class="vlist-r"><span class="vlist" style="height:0.9869199999999999em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight"><span
+                                                            class="mord mathit mtight">x</span><span
+                                                            class="msupsub"><span class="vlist-t"><span
+                                                                    class="vlist-r"><span class="vlist"
+                                                                        style="height:0.8913142857142857em;"><span
+                                                                            style="top:-2.931em;margin-right:0.07142857142857144em;"><span
+                                                                                class="pstrut"
+                                                                                style="height:2.5em;"></span><span
+                                                                                class="sizing reset-size3 size1 mtight"><span
+                                                                                    class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span
+                        class="mopen">(</span><span class="mord">1</span><span class="mord rule"
+                        style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span
+                        class="mord rule" style="margin-right:0.2222222222222222em;"></span><span
+                        class="mord">2</span><span class="mord"><span class="mord mathit">x</span><span
+                            class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.8141079999999999em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span
+                                                    class="mord mtight">2</span></span></span></span></span></span></span></span><span
+                        class="mclose">)</span></span></span></span></span>
+</p>
+<p class="has-line-data" data-line-start="14" data-line-end="16">Sachant que $0,2 = \frac{1}{5}$, on obtient bien :<br>
+    <span class="math inline"><span class="katex"><span class="katex-mathml"><math>
+                    <semantics>
+                        <mrow>
+                            <msup>
+                                <mi>f</mi>
+                                <mo mathvariant="normal">′</mo>
+                            </msup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                            <mfrac>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mn>5</mn>
+                                </mrow>
+                            </mfrac>
+                            <mo>(</mo>
+                            <mn>1</mn>
+                            <mo>+</mo>
+                            <mn>2</mn>
+                            <msup>
+                                <mi>x</mi>
+                                <mn>2</mn>
+                            </msup>
+                            <mo>)</mo>
+                            <msup>
+                                <mi>e</mi>
+                                <msup>
+                                    <mi>x</mi>
+                                    <mn>2</mn>
+                                </msup>
+                            </msup>
+                        </mrow>
+                        <annotation encoding="application/x-tex">f&#x27;(x) = \frac{1}{5}(1 + 2x^2)e^{x^2}</annotation>
+                    </semantics>
+                </math></span><span class="katex-html" aria-hidden="true"><span class="strut"
+                    style="height:0.9869199999999999em;"></span><span class="strut bottom"
+                    style="height:1.3319199999999998em;vertical-align:-0.345em;"></span><span class="base"><span
+                        class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span
+                            class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span
+                                                class="pstrut" style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">′</span></span></span></span></span></span></span></span></span><span
+                        class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span
+                        class="mord rule" style="margin-right:0.2777777777777778em;"></span><span
+                        class="mrel">=</span><span class="mord rule"
+                        style="margin-right:0.2777777777777778em;"></span><span class="mord"><span
+                            class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span
+                                    class="vlist-r"><span class="vlist" style="height:0.845108em;"><span
+                                            style="top:-2.6550000000000002em;"><span class="pstrut"
+                                                style="height:3em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">5</span></span></span></span><span
+                                            style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span
+                                                class="stretchy" style="height:0.2em;"><svg width='400em' height='0.2em'
+                                                    viewBox='0 0 400000 200' preserveAspectRatio='xMinYMin slice'>
+                                                    <path d='M0 80H400000 v40H0z M0 80H400000 v40H0z' />
+                                                </svg></span></span><span style="top:-3.394em;"><span class="pstrut"
+                                                style="height:3em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight">1</span></span></span></span></span><span
+                                        class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                        style="height:0.345em;"></span></span></span></span><span
+                            class="mclose nulldelimiter"></span></span><span class="mopen">(</span><span
+                        class="mord">1</span><span class="mord rule"
+                        style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span
+                        class="mord rule" style="margin-right:0.2222222222222222em;"></span><span
+                        class="mord">2</span><span class="mord"><span class="mord mathit">x</span><span
+                            class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.8141079999999999em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span
+                                                    class="mord mtight">2</span></span></span></span></span></span></span></span><span
+                        class="mclose">)</span><span class="mord"><span class="mord mathit">e</span><span
+                            class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                        style="height:0.9869199999999999em;"><span
+                                            style="top:-3.063em;margin-right:0.05em;"><span class="pstrut"
+                                                style="height:2.7em;"></span><span
+                                                class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span
+                                                        class="mord mtight"><span
+                                                            class="mord mathit mtight">x</span><span
+                                                            class="msupsub"><span class="vlist-t"><span
+                                                                    class="vlist-r"><span class="vlist"
+                                                                        style="height:0.8913142857142857em;"><span
+                                                                            style="top:-2.931em;margin-right:0.07142857142857144em;"><span
+                                                                                class="pstrut"
+                                                                                style="height:2.5em;"></span><span
+                                                                                class="sizing reset-size3 size1 mtight"><span
+                                                                                    class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+</p>
+<p class="has-line-data" data-line-start="17" data-line-end="18"><strong>(b) Tableau de variation sur $[0; 1]$</strong>
+</p>
+<ul>
+    <li class="has-line-data" data-line-start="18" data-line-end="19"><strong>Signe :</strong> Pour tout $x \in [0; 1]$,
+        $x^2 \geqslant 0$ donc $(1+2x^2)$ est strictement positif. La fonction exponentielle est toujours strictement
+        positive. Donc $f’(x) &gt; 0$.</li>
+    <li class="has-line-data" data-line-start="19" data-line-end="20"><strong>Variation :</strong> La fonction $f$ est
+        strictement croissante sur l’intervalle.</li>
+    <li class="has-line-data" data-line-start="20" data-line-end="24"><strong>Images aux bornes :</strong>
+        <ul>
+            <li class="has-line-data" data-line-start="21" data-line-end="22">$f(0) = 0,2 \times 0 \times e^0 = 0$</li>
+            <li class="has-line-data" data-line-start="22" data-line-end="24">$f(1) = 0,2 \times 1 \times e^1 = 0,2e
+                \approx 0,54$</li>
+        </ul>
+    </li>
+</ul>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th style="text-align:center">$x$</th>
+            <th style="text-align:center">$0$</th>
+            <th style="text-align:center">$\quad$</th>
+            <th style="text-align:center">$1$</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align:center">$f’(x)$</td>
+            <td style="text-align:center"></td>
+            <td style="text-align:center">$+$</td>
+            <td style="text-align:center"></td>
+        </tr>
+        <tr>
+            <td style="text-align:center">$f(x)$</td>
+            <td style="text-align:center">$0$</td>
+            <td style="text-align:center">$\nearrow$</td>
+            <td style="text-align:center">$0,2e$</td>
+        </tr>
+    </tbody>
+</table>
+<h2 class="code-line" data-line-start=29 data-line-end=30><a id="2_Raisonnement_par_rcurrence_29"></a>2. Raisonnement
+    par récurrence</h2>
+<p class="has-line-data" data-line-start="30" data-line-end="31">On souhaite démontrer que pour tout entier naturel $n$
+    : $0 \leqslant u_{n+1} \leqslant u_n \leqslant 1$.</p>
+<ul>
+    <li class="has-line-data" data-line-start="32" data-line-end="37">
+        <p class="has-line-data" data-line-start="32" data-line-end="36"><strong>Initialisation ($n=0$) :</strong><br>
+            $u_0 = 1$ et $u_1 = f(u_0) = f(1) = 0,2e \approx 0,54$.<br>
+            On constate que $0 \leqslant 0,54 \leqslant 1 \leqslant 1$.<br>
+            La propriété est vraie au rang $n=0$.</p>
+    </li>
+    <li class="has-line-data" data-line-start="37" data-line-end="50">
+        <p class="has-line-data" data-line-start="37" data-line-end="42"><strong>Hérédité :</strong><br>
+            Supposons que pour un entier $k$ fixé, $0 \leqslant u_{k+1} \leqslant u_k \leqslant 1$.<br>
+            La fonction $f$ étant <strong>strictement croissante</strong> sur $[0; 1]$, elle conserve l’ordre des
+            inégalités :<br>
+            <span class="math inline"><span class="katex"><span class="katex-mathml"><math>
+                            <semantics>
+                                <mrow>
+                                    <mi>f</mi>
+                                    <mo>(</mo>
+                                    <mn>0</mn>
+                                    <mo>)</mo>
+                                    <mo>⩽</mo>
+                                    <mi>f</mi>
+                                    <mo>(</mo>
+                                    <msub>
+                                        <mi>u</mi>
+                                        <mrow>
+                                            <mi>k</mi>
+                                            <mo>+</mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </msub>
+                                    <mo>)</mo>
+                                    <mo>⩽</mo>
+                                    <mi>f</mi>
+                                    <mo>(</mo>
+                                    <msub>
+                                        <mi>u</mi>
+                                        <mi>k</mi>
+                                    </msub>
+                                    <mo>)</mo>
+                                    <mo>⩽</mo>
+                                    <mi>f</mi>
+                                    <mo>(</mo>
+                                    <mn>1</mn>
+                                    <mo>)</mo>
+                                </mrow>
+                                <annotation encoding="application/x-tex">f(0) \leqslant f(u_{k+1}) \leqslant f(u_k)
+                                    \leqslant f(1)</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="strut"
+                            style="height:0.75em;"></span><span class="strut bottom"
+                            style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span
+                                class="mord mathit" style="margin-right:0.10764em;">f</span><span
+                                class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span
+                                class="mord rule" style="margin-right:0.2777777777777778em;"></span><span
+                                class="mrel amsrm">⩽</span><span class="mord rule"
+                                style="margin-right:0.2777777777777778em;"></span><span class="mord mathit"
+                                style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span
+                                class="mord"><span class="mord mathit">u</span><span class="msupsub"><span
+                                        class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                                style="height:0.3361079999999999em;"><span
+                                                    style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span
+                                                        class="pstrut" style="height:2.7em;"></span><span
+                                                        class="sizing reset-size6 size3 mtight"><span
+                                                            class="mord mtight"><span class="mord mathit mtight"
+                                                                style="margin-right:0.03148em;">k</span><span
+                                                                class="mbin mtight">+</span><span
+                                                                class="mord mtight">1</span></span></span></span></span><span
+                                                class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                                style="height:0.208331em;"></span></span></span></span></span><span
+                                class="mclose">)</span><span class="mord rule"
+                                style="margin-right:0.2777777777777778em;"></span><span class="mrel amsrm">⩽</span><span
+                                class="mord rule" style="margin-right:0.2777777777777778em;"></span><span
+                                class="mord mathit" style="margin-right:0.10764em;">f</span><span
+                                class="mopen">(</span><span class="mord"><span class="mord mathit">u</span><span
+                                    class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span
+                                                class="vlist" style="height:0.33610799999999996em;"><span
+                                                    style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span
+                                                        class="pstrut" style="height:2.7em;"></span><span
+                                                        class="sizing reset-size6 size3 mtight"><span
+                                                            class="mord mathit mtight"
+                                                            style="margin-right:0.03148em;">k</span></span></span></span><span
+                                                class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                                style="height:0.15em;"></span></span></span></span></span><span
+                                class="mclose">)</span><span class="mord rule"
+                                style="margin-right:0.2777777777777778em;"></span><span class="mrel amsrm">⩽</span><span
+                                class="mord rule" style="margin-right:0.2777777777777778em;"></span><span
+                                class="mord mathit" style="margin-right:0.10764em;">f</span><span
+                                class="mopen">(</span><span class="mord">1</span><span
+                                class="mclose">)</span></span></span></span></span><br>
+            Or :
+        </p>
+        <ul>
+            <li class="has-line-data" data-line-start="42" data-line-end="43">$f(0)=0$</li>
+            <li class="has-line-data" data-line-start="43" data-line-end="44">$f(u_{k+1}) = u_{k+2}$</li>
+            <li class="has-line-data" data-line-start="44" data-line-end="45">$f(u_k) = u_{k+1}$</li>
+            <li class="has-line-data" data-line-start="45" data-line-end="47">$f(1) \approx 0,54 \leqslant 1$</li>
+        </ul>
+        <p class="has-line-data" data-line-start="47" data-line-end="49">On obtient donc : $0 \leqslant u_{k+2}
+            \leqslant u_{k+1} \leqslant 1$.<br>
+            L’hérédité est démontrée.</p>
+    </li>
+    <li class="has-line-data" data-line-start="50" data-line-end="52">
+        <p class="has-line-data" data-line-start="50" data-line-end="51"><strong>Conclusion :</strong> D’après le
+            principe de récurrence, la propriété est vraie pour tout $n \in \mathbb{N}$.</p>
+    </li>
+</ul>
+<h2 class="code-line" data-line-start=52 data-line-end=53><a id="3_Convergence_52"></a>3. Convergence</h2>
+<p class="has-line-data" data-line-start="53" data-line-end="55">La suite $(u_n)$ est <strong>décroissante</strong> (car
+    $u_{n+1} \leqslant u_n$ pour tout $n$) et <strong>minorée</strong> par 0 (car $u_n \geqslant 0$).<br>
+    D’après le théorème de convergence monotone, la suite $(u_n)$ converge vers une limite $\ell$ telle que $0 \leqslant
+    \ell \leqslant 1$.</p>
+<h2 class="code-line" data-line-start=56 data-line-end=57><a id="4_Algorithmique_Python_56"></a>4. Algorithmique
+    (Python)</h2>
+<p class="has-line-data" data-line-start="58" data-line-end="60"><strong>(a) Justification</strong><br>
+    On admet que $\ell = 0$. Par définition de la limite, pour tout réel $a &gt; 0$, il existe un rang $n_0$ à partir
+    duquel tous les termes de la suite sont strictement inférieurs à $a$ ($u_n \in [0; a[$). La fonction cherche ce
+    premier rang $n_0$.</p>
+<p class="has-line-data" data-line-start="61" data-line-end="63"><strong>(b) Script Python complété</strong><br>
+    L’algorithme doit tourner tant que $u$ n’est pas passé sous le seuil $a$.</p>
+<pre><code class="has-line-data" data-line-start="65" data-line-end="74" class="language-python"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> *
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">seuil</span><span class="hljs-params">(a)</span>:</span>
+    u = <span class="hljs-number">1</span>
+    n = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> u &gt;= a :        <span class="hljs-comment"># Tant que u est supérieur ou égal au seuil a</span>
+        n = n + <span class="hljs-number">1</span>         <span class="hljs-comment"># On passe au rang suivant</span>
+        u = <span class="hljs-number">0.2</span> * u * exp(u**<span class="hljs-number">2</span>) <span class="hljs-comment"># Calcul du terme u_n+1 avec la formule de f(x)</span>
+    <span class="hljs-keyword">return</span>(n)</code></pre>
