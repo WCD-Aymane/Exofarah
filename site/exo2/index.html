@@ -1,0 +1,606 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../exo1/">
+      
+      
+        <link rel="next" href="../exo3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.11">
+    
+    
+      
+        <title>Exercice 2 : Géométrie dans l'espace - My Zensical Site</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.bd6182e7.min.css">
+      
+      
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercice-2-geometrie-dans-lespace" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Zensical Site" class="md-header__button md-logo" aria-label="My Zensical Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Zensical Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercice 2 : Géométrie dans l'espace
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Zensical Site" class="md-nav__button md-logo" aria-label="My Zensical Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    My Zensical Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exo1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 1 : Analyse de suite et fonction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 2 : Géométrie dans l'espace
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 2 : Géométrie dans l'espace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-positions-relatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Positions relatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-representation-parametrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Représentation paramétrique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-intersection-de-droites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Intersection de droites
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exo3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 3 : Le Cube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comment créer un site WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-positions-relatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Positions relatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-representation-parametrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Représentation paramétrique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-intersection-de-droites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Intersection de droites
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="exercice-2-geometrie-dans-lespace">Exercice 2 : Géométrie dans l'espace<a class="headerlink" href="#exercice-2-geometrie-dans-lespace" title="Permanent link">&para;</a></h1>
+<p>Données : Repère <span class="arithmatex">\((O; \vec{i}, \vec{j}, \vec{k})\)</span>.
+Points : <span class="arithmatex">\(A(-3; 2; 2)\)</span>, <span class="arithmatex">\(B(0; 3; 3)\)</span>, <span class="arithmatex">\(C(-2; 3; 1)\)</span> et <span class="arithmatex">\(D(4; 3; 10)\)</span>.</p>
+<h2 id="1-positions-relatives">1. Positions relatives<a class="headerlink" href="#1-positions-relatives" title="Permanent link">&para;</a></h2>
+<p><strong>(a) Alignement des points A, B, C</strong>
+Calculons les vecteurs :
+- <span class="arithmatex">\(\vec{AB} (0 - (-3); 3-2; 3-2) \implies \vec{AB}(3; 1; 1)\)</span>
+- <span class="arithmatex">\(\vec{AC} (-2 - (-3); 3-2; 1-2) \implies \vec{AC}(1; 1; -1)\)</span></p>
+<p>Il n'existe pas de réel <span class="arithmatex">\(k\)</span> unique tel que <span class="arithmatex">\(\vec{AB} = k\vec{AC}\)</span>.
+(Pour les abscisses <span class="arithmatex">\(3 = k \times 1 \implies k=3\)</span>, mais pour les ordonnées <span class="arithmatex">\(1 = k \times 1 \implies k=1\)</span>).
+Les vecteurs ne sont pas colinéaires, donc les points <strong>A, B et C ne sont pas alignés</strong>.</p>
+<p><strong>(b) Coplanarité des vecteurs</strong>
+Calculons <span class="arithmatex">\(\vec{AD}(4 - (-3); 3-2; 10-2) \implies \vec{AD}(7; 1; 8)\)</span>.
+On cherche deux réels <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span> tels que <span class="arithmatex">\(\vec{AD} = x\vec{AB} + y\vec{AC}\)</span>.
+Cela donne le système :
+$$
+\begin{cases} 
+3x + y = 7 \ 
+x + y = 1 \ 
+x - y = 8 
+\end{cases}
+$$
+En additionnant les deux dernières lignes : <span class="arithmatex">\(2x = 9 \implies x = 4,5\)</span>.
+En remplaçant dans la deuxième ligne : <span class="arithmatex">\(4,5 + y = 1 \implies y = -3,5\)</span>.
+Vérifions dans la première ligne : <span class="arithmatex">\(3(4,5) + (-3,5) = 13,5 - 3,5 = 10\)</span>.
+Or, on attendait 7. Le système est incompatible.
+Les vecteurs <span class="arithmatex">\(\vec{AB}\)</span>, <span class="arithmatex">\(\vec{AC}\)</span> et <span class="arithmatex">\(\vec{AD}\)</span> ne sont <strong>pas coplanaires</strong>.</p>
+<p><strong>&copy; Position relative de (AD) et (ABC)</strong>
+Comme les vecteurs ne sont pas coplanaires, le point D n'appartient pas au plan (ABC). La droite (AD) n'est ni incluse ni parallèle au plan (ABC).
+La droite (AD) et le plan (ABC) sont donc <strong>sécants</strong> (en un point unique, qui est le point A).</p>
+<h2 id="2-representation-parametrique">2. Représentation paramétrique<a class="headerlink" href="#2-representation-parametrique" title="Permanent link">&para;</a></h2>
+<p><strong>(a) Droite (AD)</strong>
+La droite passe par <span class="arithmatex">\(A(-3; 2; 2)\)</span> et a pour vecteur directeur <span class="arithmatex">\(\vec{AD}(7; 1; 8)\)</span>.
+$$
+\begin{cases} 
+x = -3 + 7t \ 
+y = 2 + t \ 
+z = 2 + 8t 
+\end{cases} 
+\quad, t \in \mathbb{R}
+$$</p>
+<p><strong>(b) Appartenance du point M</strong>
+Soit <span class="arithmatex">\(M(-\frac{19}{4}; \frac{7}{4}; 0)\)</span>. Appartient-il à (AD) ?
+On résout l'équation sur <span class="arithmatex">\(z\)</span> : <span class="arithmatex">\(2 + 8t = 0 \implies 8t = -2 \implies t = -0,25\)</span>.
+On vérifie les autres coordonnées avec <span class="arithmatex">\(t = -0,25\)</span> :
+- <span class="arithmatex">\(x = -3 + 7(-0,25) = -3 - 1,75 = -4,75\)</span>. Or <span class="arithmatex">\(-\frac{19}{4} = -4,75\)</span>. (Vrai)
+- <span class="arithmatex">\(y = 2 + (-0,25) = 1,75\)</span>. Or <span class="arithmatex">\(\frac{7}{4} = 1,75\)</span>. (Vrai)
+Le point M <strong>appartient</strong> à la droite (AD).</p>
+<h2 id="3-intersection-de-droites">3. Intersection de droites<a class="headerlink" href="#3-intersection-de-droites" title="Permanent link">&para;</a></h2>
+<p>Soit la droite <span class="arithmatex">\((d)\)</span> définie par :
+$$
+\begin{cases} 
+x = -2 - 2k \ 
+y = -3 + k \ 
+z = -6 
+\end{cases}
+\quad, k \in \mathbb{R}
+$$</p>
+<p><strong>(a) Un point appartenant à (d)</strong>
+En prenant <span class="arithmatex">\(k=0\)</span>, on obtient le point <span class="arithmatex">\(P(-2; -3; -6)\)</span>.</p>
+<p><strong>(b) Un vecteur directeur de (d)</strong>
+On lit les coefficients devant le paramètre <span class="arithmatex">\(k\)</span> : <span class="arithmatex">\(\vec{u}(-2; 1; 0)\)</span>.</p>
+<p><strong>&copy; Intersection des droites (AD) et (d)</strong>
+On cherche s'il existe un couple <span class="arithmatex">\((t, k)\)</span> vérifiant le système :
+$$
+\begin{cases} 
+-3 + 7t = -2 - 2k \quad (1) \ 
+2 + t = -3 + k \quad \quad (2) \ 
+2 + 8t = -6 \quad \quad \quad (3)
+\end{cases}
+$$
+D'après (3) : <span class="arithmatex">\(8t = -8 \implies t = -1\)</span>.
+On remplace <span class="arithmatex">\(t\)</span> dans (2) : <span class="arithmatex">\(2 + (-1) = -3 + k \implies 1 = -3 + k \implies k = 4\)</span>.
+On vérifie la compatibilité dans (1) :
+- Membre de gauche : <span class="arithmatex">\(-3 + 7(-1) = -10\)</span>.
+- Membre de droite : <span class="arithmatex">\(-2 - 2(4) = -2 - 8 = -10\)</span>.
+L'égalité est vérifiée. Les droites sont sécantes.</p>
+<p>Pour trouver les coordonnées du point d'intersection <span class="arithmatex">\(I\)</span>, on remplace <span class="arithmatex">\(t=-1\)</span> dans la paramétrique de (AD) :
+- <span class="arithmatex">\(x = -3 - 7 = -10\)</span>
+- <span class="arithmatex">\(y = 2 - 1 = 1\)</span>
+- <span class="arithmatex">\(z = 2 - 8 = -6\)</span>
+Les droites sont sécantes au point <strong><span class="arithmatex">\(M(-10; 1; -6)\)</span></strong> (Note: l'énoncé l'appelle M, mais pour éviter la confusion avec la question 2b, notons-le point d'intersection).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":[],"search":"../assets/javascripts/workers/search.5df7522c.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.21aa498e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

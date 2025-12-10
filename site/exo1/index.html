@@ -1,0 +1,632 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="../exo2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.11">
+    
+    
+      
+        <title>Exercice 1 : Analyse de suite et fonction - My Zensical Site</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.bd6182e7.min.css">
+      
+      
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercice-1-analyse-de-suite-et-fonction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Zensical Site" class="md-header__button md-logo" aria-label="My Zensical Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Zensical Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercice 1 : Analyse de suite et fonction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Zensical Site" class="md-nav__button md-logo" aria-label="My Zensical Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    My Zensical Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 1 : Analyse de suite et fonction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 1 : Analyse de suite et fonction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-etude-de-la-fonction-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Étude de la fonction \(f\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-raisonnement-par-recurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Raisonnement par récurrence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-algorithmique-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Algorithmique (Python)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exo2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 2 : Géométrie dans l'espace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exo3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 3 : Le Cube
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comment créer un site WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-etude-de-la-fonction-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Étude de la fonction \(f\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-raisonnement-par-recurrence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Raisonnement par récurrence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-algorithmique-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Algorithmique (Python)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="exercice-1-analyse-de-suite-et-fonction">Exercice 1 : Analyse de suite et fonction<a class="headerlink" href="#exercice-1-analyse-de-suite-et-fonction" title="Permanent link">&para;</a></h1>
+<h2 id="1-etude-de-la-fonction-f">1. Étude de la fonction <span class="arithmatex">\(f\)</span><a class="headerlink" href="#1-etude-de-la-fonction-f" title="Permanent link">&para;</a></h2>
+<p><strong>(a) Calcul de la dérivée</strong>
+On considère la fonction définie sur <span class="arithmatex">\([0; 1]\)</span> par <span class="arithmatex">\(f(x) = 0,2 x e^{x^2}\)</span>.
+C'est une forme <span class="arithmatex">\(u \times v\)</span> avec :
+- <span class="arithmatex">\(u(x) = 0,2x \implies u'(x) = 0,2\)</span>
+- <span class="arithmatex">\(v(x) = e^{x^2} \implies v'(x) = 2x e^{x^2}\)</span> (dérivée composée <span class="arithmatex">\((e^u)' = u'e^u\)</span>)</p>
+<div class="arithmatex">\[f'(x) = u'(x)v(x) + u(x)v'(x)$$
+$$f'(x) = 0,2 e^{x^2} + 0,2x (2x e^{x^2})$$
+$$f'(x) = 0,2 e^{x^2} (1 + 2x^2)\]</div>
+<p>Sachant que <span class="arithmatex">\(0,2 = \frac{1}{5}\)</span>, on obtient bien :
+<span class="arithmatex">\(<span class="arithmatex">\(f'(x) = \frac{1}{5}(1 + 2x^2)e^{x^2}\)</span>\)</span></p>
+<p><strong>(b) Tableau de variation sur <span class="arithmatex">\([0; 1]\)</span></strong>
+- <strong>Signe :</strong> Pour tout <span class="arithmatex">\(x \in [0; 1]\)</span>, <span class="arithmatex">\(x^2 \geqslant 0\)</span> donc <span class="arithmatex">\((1+2x^2)\)</span> est strictement positif. La fonction exponentielle est toujours strictement positive. Donc <span class="arithmatex">\(f'(x) &gt; 0\)</span>.
+- <strong>Variation :</strong> La fonction <span class="arithmatex">\(f\)</span> est strictement croissante sur l'intervalle.
+- <strong>Images aux bornes :</strong>
+  - <span class="arithmatex">\(f(0) = 0,2 \times 0 \times e^0 = 0\)</span>
+  - <span class="arithmatex">\(f(1) = 0,2 \times 1 \times e^1 = 0,2e \approx 0,54\)</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(0\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\quad\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(f'(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(f(x)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\nearrow\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0,2e\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-raisonnement-par-recurrence">2. Raisonnement par récurrence<a class="headerlink" href="#2-raisonnement-par-recurrence" title="Permanent link">&para;</a></h2>
+<p>On souhaite démontrer que pour tout entier naturel <span class="arithmatex">\(n\)</span> : <span class="arithmatex">\(0 \leqslant u_{n+1} \leqslant u_n \leqslant 1\)</span>.</p>
+<ul>
+<li>
+<p><strong>Initialisation (<span class="arithmatex">\(n=0\)</span>) :</strong>
+    <span class="arithmatex">\(u_0 = 1\)</span> et <span class="arithmatex">\(u_1 = f(u_0) = f(1) = 0,2e \approx 0,54\)</span>.
+    On constate que <span class="arithmatex">\(0 \leqslant 0,54 \leqslant 1 \leqslant 1\)</span>.
+    La propriété est vraie au rang <span class="arithmatex">\(n=0\)</span>.</p>
+</li>
+<li>
+<p><strong>Hérédité :</strong>
+    Supposons que pour un entier <span class="arithmatex">\(k\)</span> fixé, <span class="arithmatex">\(0 \leqslant u_{k+1} \leqslant u_k \leqslant 1\)</span>.
+    La fonction <span class="arithmatex">\(f\)</span> étant <strong>strictement croissante</strong> sur <span class="arithmatex">\([0; 1]\)</span>, elle conserve l'ordre des inégalités :
+    <span class="arithmatex">\(<span class="arithmatex">\(f(0) \leqslant f(u_{k+1}) \leqslant f(u_k) \leqslant f(1)\)</span>\)</span>
+    Or :</p>
+<ul>
+<li><span class="arithmatex">\(f(0)=0\)</span></li>
+<li><span class="arithmatex">\(f(u_{k+1}) = u_{k+2}\)</span></li>
+<li><span class="arithmatex">\(f(u_k) = u_{k+1}\)</span></li>
+<li><span class="arithmatex">\(f(1) \approx 0,54 \leqslant 1\)</span></li>
+</ul>
+<p>On obtient donc : <span class="arithmatex">\(0 \leqslant u_{k+2} \leqslant u_{k+1} \leqslant 1\)</span>.
+L'hérédité est démontrée.</p>
+</li>
+<li>
+<p><strong>Conclusion :</strong> D'après le principe de récurrence, la propriété est vraie pour tout <span class="arithmatex">\(n \in \mathbb{N}\)</span>.</p>
+</li>
+</ul>
+<h2 id="3-convergence">3. Convergence<a class="headerlink" href="#3-convergence" title="Permanent link">&para;</a></h2>
+<p>La suite <span class="arithmatex">\((u_n)\)</span> est <strong>décroissante</strong> (car <span class="arithmatex">\(u_{n+1} \leqslant u_n\)</span> pour tout <span class="arithmatex">\(n\)</span>) et <strong>minorée</strong> par 0 (car <span class="arithmatex">\(u_n \geqslant 0\)</span>).
+D'après le théorème de convergence monotone, la suite <span class="arithmatex">\((u_n)\)</span> converge vers une limite <span class="arithmatex">\(\ell\)</span> telle que <span class="arithmatex">\(0 \leqslant \ell \leqslant 1\)</span>.</p>
+<h2 id="4-algorithmique-python">4. Algorithmique (Python)<a class="headerlink" href="#4-algorithmique-python" title="Permanent link">&para;</a></h2>
+<p><strong>(a) Justification</strong>
+On admet que <span class="arithmatex">\(\ell = 0\)</span>. Par définition de la limite, pour tout réel <span class="arithmatex">\(a &gt; 0\)</span>, il existe un rang <span class="arithmatex">\(n_0\)</span> à partir duquel tous les termes de la suite sont strictement inférieurs à <span class="arithmatex">\(a\)</span> (<span class="arithmatex">\(u_n \in [0; a[\)</span>). La fonction cherche ce premier rang <span class="arithmatex">\(n_0\)</span>.</p>
+<p><strong>(b) Script Python complété</strong>
+L'algorithme doit tourner tant que <span class="arithmatex">\(u\)</span> n'est pas passé sous le seuil <span class="arithmatex">\(a\)</span>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">seuil</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">u</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">while</span> <span class="n">u</span> <span class="o">&gt;=</span> <span class="n">a</span> <span class="p">:</span>        <span class="c1"># Tant que u est supérieur ou égal au seuil a</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>         <span class="c1"># On passe au rang suivant</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">u</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">u</span> <span class="o">*</span> <span class="n">exp</span><span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Calcul du terme u_n+1 avec la formule de f(x)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">return</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":[],"search":"../assets/javascripts/workers/search.5df7522c.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.21aa498e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
