@@ -1,22 +1,182 @@
 import os
 import glob
 from datetime import datetime
+import json
 
-def generate_html():
-    # Find all .md files in current directory
+def get_viewer_template(title, content):
+    """
+    Returns the HTML content for a single Markdown viewer file.
+    Embeds the markdown content safely to be rendered by JS.
+    """
+    # Escape backticks in content to prevent breaking the JS string template
+    safe_content = content.replace("`", "\\`").replace("${", "\\${")
+    
+    return f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <!-- MathJax for LaTeX formulas -->
+    <script>
+    MathJax = {{
+      tex: {{
+        inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+        displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']]
+      }},
+      svg: {{
+        fontCache: 'global'
+      }}
+    }};
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <!-- Marked for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <style>
+        :root {{
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+            --code-bg: #020617;
+        }}
+        
+        body {{
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }}
+
+        .container {{
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }}
+
+        /* Markdown Styles */
+        h1, h2, h3 {{
+            color: var(--accent);
+            margin-top: 1.5em;
+        }}
+        
+        h1 {{ border-bottom: 2px solid var(--border); padding-bottom: 10px; }}
+        
+        code {{
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+        }}
+        
+        pre {{
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }}
+        
+        pre code {{
+            background: transparent;
+            color: var(--text-primary);
+            padding: 0;
+        }}
+
+        blockquote {{
+            border-left: 4px solid var(--accent);
+            margin: 0;
+            padding-left: 16px;
+            color: var(--text-secondary);
+        }}
+        
+        table {{
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }}
+        
+        th, td {{
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }}
+        
+        th {{
+            background-color: rgba(255, 255, 255, 0.05);
+        }}
+
+        .back-link {{
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }}
+        
+        .back-link:hover {{
+            color: var(--accent);
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Retour à l'index</a>
+        <div id="content"></div>
+    </div>
+
+    <script>
+        const markdownContent = `{safe_content}`;
+        
+        // Configure marked to not escape math
+        // We do a simple pass: render markdown, then let MathJax render math in the result
+        document.getElementById('content').innerHTML = marked.parse(markdownContent);
+    </script>
+</body>
+</html>
+"""
+
+def generate_site():
+    # Find all .md files
     md_files = glob.glob("*.md")
     
-    # Simple data structure for the files
     files_data = []
+    
     for f in md_files:
         stats = os.stat(f)
+        
+        # Read content
+        with open(f, 'r', encoding='utf-8') as md_file:
+            content = md_file.read()
+            
+        # Generate HTML filename (e.g., Exo1.md -> Exo1.html)
+        html_filename = f.replace('.md', '.html')
+        
+        # Write individual HTML viewer file
+        with open(html_filename, 'w', encoding='utf-8') as html_file:
+            html_file.write(get_viewer_template(f, content))
+            
         files_data.append({
             "name": f,
+            "link": html_filename,
             "modified": datetime.fromtimestamp(stats.st_mtime).strftime('%Y-%m-%d %H:%M'),
             "size": f"{stats.st_size / 1024:.1f} KB"
         })
 
-    html_content = f"""<!DOCTYPE html>
+    # Generate Main Index
+    index_html = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -176,7 +336,7 @@ def generate_html():
 
         <div class="file-list" id="fileList">
             {''.join([f'''
-            <a href="{file['name']}" class="file-card" data-name="{file['name'].lower()}">
+            <a href="{file['link']}" class="file-card" data-name="{file['name'].lower()}">
                 <div class="file-info">
                     <div class="icon">MD</div>
                     <div class="file-details">
@@ -212,11 +372,10 @@ def generate_html():
 </body>
 </html>
 """
-
     with open("index.html", "w", encoding="utf-8") as f:
-        f.write(html_content)
+        f.write(index_html)
     
-    print(f"Index généré avec succès ! {len(md_files)} fichiers trouvés.")
+    print(f"Site généré avec succès ! {len(md_files)} fichiers convertis.")
 
 if __name__ == "__main__":
-    generate_html()
+    generate_site()
